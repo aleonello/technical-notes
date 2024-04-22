@@ -1,23 +1,22 @@
-# References by Technology
+# Kubernetes
 
-## Python
+## Tools
 
-* [Comprehensive Python Cheatsheet](https://gto76.github.io/python-cheatsheet/)
-* [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/intro/learning/)
-* [The Hitchhiker’s Guide to Python - Learning Path](https://docs.python-guide.org/intro/learning/)
-
-## Helm Chart
-
-### Search for a chart version
+* Windows Chocolatey script to install Kubernetes tools
 
 ```
-helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
-helm search repo secrets-store-csi-driver
+choco install kubernetes-cli -y
+choco install kubernetes-helm -y
+choco install k9s -y
+choco install rancher-desktop -y
+choco install terraform -y
+choco install terraform-docs -y
+choco install tflint -y
+choco install terragrunt -y
+choco install wsl2 -y
 ```
 
-## Kubernetes
-
-### Node Selector and Toleration
+## Node Selector and Toleration
 
 ```
   nodeSelector:
@@ -115,36 +114,4 @@ spec:
     configMap:
       name: test-apm-python-configmap
   restartPolicy: Never
-```
-
-### Kubectl
-
-* [Kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-
-#### Copy a TLS secret to another service
-
-```
-kubectl get secret <existing_service_name> --namespace=<namespace> -oyaml > tls.yaml
-```
-Edit the tls.yaml file with the new namespace and service name values.
-
-```
-kubectl apply -f tls.yaml
-```
-
-#### Connect to a pod terminal
-
-* Pod
-```
-kubectl -n {NAMESPACE} exec --stdin --tty {POD} -- /bin/bash
-```
-* Container
-```
-kubectl -n {NAMESPACE} exec --stdin --tty {POD} --container {CONTAINER} -- /bin/sh
-```
-
-#### Copy files from pod to bastion
-
-```
-kubectl cp <pod-name>:<fully-qualified-file-name> /<path-to-your-file>/<file-name> -c <container-name>
 ```
