@@ -16,6 +16,20 @@ choco install terragrunt -y
 choco install wsl2 -y
 ```
 
+## Links
+
+* [Ingress NGINX](https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx)
+* [Storage Class](https://kubernetes.io/docs/concepts/storage/storage-classes/)
+* [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
+* [ArgoCD Persistent Volume](https://github.com/argoproj/argo-helm/issues/438)
+* [External DNS addon](https://github.com/kubernetes-sigs/external-dns)
+* [Injecting secrets into Kubernetes pods via Vault Agent containers](https://developer.hashicorp.com/vault/tutorials/kubernetes/kubernetes-sidecar)
+* [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets)
+* [LongHorn - Distributed Block Storage - EBS](https://longhorn.io/)
+* [OpenEBS - Distributed Block Storage - EBS](https://openebs.io/)
+* [CloudQuery ELT](https://github.com/cloudquery/cloudquery)
+
+
 ## Node Selector and Toleration
 
 ```
