@@ -2,7 +2,7 @@
 
 ## Create an empty pipeline
 
-```
+```yaml
 stages:
 - build
 
@@ -18,7 +18,7 @@ script:
 
 * gitlab-role.yaml
 
-```
+```yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -35,7 +35,7 @@ rules:
 
 * gitlab-role-binding.yaml
 
-```
+```yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:

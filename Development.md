@@ -4,7 +4,7 @@
 
 * Windows Chocolatey script to install Development tools
 
-```
+```powershell
 choco install nodejs-lts -y
 npm install -g npm@10.0.0
 npm install -g @angular/cli

@@ -4,7 +4,7 @@
 
 * Windows Chocolatey script to install Kubernetes tools
 
-```
+```powershell
 choco install kubernetes-cli -y
 choco install kubernetes-helm -y
 choco install k9s -y
@@ -32,7 +32,7 @@ choco install wsl2 -y
 
 ## Node Selector and Toleration
 
-```
+```yaml
   nodeSelector:
     name: devops
   tolerations:
@@ -44,7 +44,7 @@ choco install wsl2 -y
 
 ## Sample Python application to run in K8S
 
-```
+```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
