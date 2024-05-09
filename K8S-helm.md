@@ -2,26 +2,26 @@
 
 ## Search for a chart version
 
-```shell
+```sh
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
 helm search repo secrets-store-csi-driver
 ```
 
 ## Helm list all services for all namespaces
 
-```shell
+```sh
 helm ls --all-namespaces --all
 ```
 
 ## Helm Rollback example
 
 
-```shell
+```sh
 helm rollback prometheus-stack 2 --namespace prometheus-stack
 ```
 
 ## Validate helm values
 
-```shell
+```sh
 helm template ./ms-service | kubectl apply --dry-run -f -
 ```

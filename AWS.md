@@ -25,25 +25,43 @@
 
 * Windows Chocolatey script to install Development tools
 
-```
+```sh
 choco install awscli -y
 ```
 
-## Update EKS Kubeconfig
+## AWS CLI - Update EKS Kubeconfig
 
-```
+```sh
 aws eks update-kubeconfig --region region-code --name my-cluster
 ```
 
-## Get EKS addons list
+## AWS CLI - Get EKS addons list
 
-```
+```sh
 aws eks describe-addon-versions --query 'addons[*].addonName'
+```
+
+## AWS CLI - S3 List bucket content into separated files
+
+```sh
+for i in $(aws s3 ls | awk '{print $3}'); do echo "Bucket: $i" && aws s3 ls s3://$i --recursive > $i.txt; done
+```
+
+## AWS CLI - S3 Clean objects
+
+```sh
+aws s3 rm s3://bucket --recursive
+```
+
+## AWS CLI - S3 Delete bucket
+
+```sh
+aws s3 rb s3://bucket
 ```
 
 ## Install a Python package in a custom path to import it to the AWS Lambda
 
-```
+```sh
 pip3 install <package> -t <temp_folder>
 ```
 
@@ -52,7 +70,7 @@ pip3 install <package> -t <temp_folder>
 * https://repost.aws/knowledge-center/cloudwatch-container-insights-eks-fargate
 
 * Cwagent.yaml
-```
+```yaml
 # deploy cwagent as daemonset
 apiVersion: apps/v1
 kind: DaemonSet
