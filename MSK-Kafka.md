@@ -91,6 +91,7 @@ kubectl create namespace kafka-test
 
 ```sh
 kubectl apply -f kafka-test.yaml -n kafka-test
+```
 
 * Access the pod terminal
 
