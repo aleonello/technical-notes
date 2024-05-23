@@ -10,4 +10,5 @@
 * [MSK Kafka](./MSK-Kafka.md)
 * [Python](./Python.md)
 * [SSL Certificate](./SSL.md)
+* [Terminal Shell](./Terminal-Shell.md)
 * [Terraform](./Terraform.md)
