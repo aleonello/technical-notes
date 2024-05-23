@@ -1,5 +1,13 @@
 # MSK Kafka
 
+# Links
+
+* [How connect to MSK cluster from EKS cluster](https://stackoverflow.com/questions/69819087/how-connect-to-msk-cluster-from-eks-cluster)
+* [Securing Apache Kafka is easy and familiar with IAM Access Control for Amazon MSK](https://aws.amazon.com/pt/blogs/big-data/securing-apache-kafka-is-easy-and-familiar-with-iam-access-control-for-amazon-msk/)
+* [Applying IRSA](https://www.eksworkshop.com/docs/security/iam-roles-for-service-accounts/add_irsa/)
+* [Understanding IAM roles for service accounts, IRSA, on AWS EKS.](https://medium.com/@ankit.wal/the-how-of-iam-roles-for-service-accounts-irsa-on-aws-eks-3d76badb8942)
+* [Kafka UI AWS IAM](https://docs.kafka-ui.provectus.io/configuration/authentication/aws-iam)
+
 ## Connect EKS pod to the MSK Kafka using IAM Auth
 
 Create AWS IAM Role
@@ -153,10 +161,3 @@ kubectl delete -f kafka-test.yaml
 ```sh
 kubectl delete namespace kafka-test
 ```
-
-* References
-
-* [How connect to MSK cluster from EKS cluster](https://stackoverflow.com/questions/69819087/how-connect-to-msk-cluster-from-eks-cluster)
-* [Securing Apache Kafka is easy and familiar with IAM Access Control for Amazon MSK](https://aws.amazon.com/pt/blogs/big-data/securing-apache-kafka-is-easy-and-familiar-with-iam-access-control-for-amazon-msk/)
-* [Applying IRSA](https://www.eksworkshop.com/docs/security/iam-roles-for-service-accounts/add_irsa/)
-* [Understanding IAM roles for service accounts, IRSA, on AWS EKS.](https://medium.com/@ankit.wal/the-how-of-iam-roles-for-service-accounts-irsa-on-aws-eks-3d76badb8942)
