@@ -158,3 +158,5 @@ kubectl delete namespace kafka-test
 
 * [How connect to MSK cluster from EKS cluster](https://stackoverflow.com/questions/69819087/how-connect-to-msk-cluster-from-eks-cluster)
 * [Securing Apache Kafka is easy and familiar with IAM Access Control for Amazon MSK](https://aws.amazon.com/pt/blogs/big-data/securing-apache-kafka-is-easy-and-familiar-with-iam-access-control-for-amazon-msk/)
+* [Applying IRSA](https://www.eksworkshop.com/docs/security/iam-roles-for-service-accounts/add_irsa/)
+* [Understanding IAM roles for service accounts, IRSA, on AWS EKS.](https://medium.com/@ankit.wal/the-how-of-iam-roles-for-service-accounts-irsa-on-aws-eks-3d76badb8942)
