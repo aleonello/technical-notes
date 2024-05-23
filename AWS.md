@@ -20,6 +20,7 @@
 * [LocalStack Feature Coverage](https://docs.localstack.cloud/user-guide/aws/feature-coverage/)
 * [Install K9s in AWS EC2 Instance](https://linux.how2shout.com/how-to-install-k9s-in-amazon-linux-2023/)
 * [Install eksctl in AWS EC2 Instance](https://blog.knoldus.com/how-to-install-eksctl-the-official-cli-for-amazon-eks/)
+* [Max Pods per ENI - VPC CNI](https://github.com/aws/amazon-vpc-cni-k8s/blob/master/misc/eni-max-pods.txt)
 
 ## Tools
 
