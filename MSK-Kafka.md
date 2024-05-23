@@ -7,6 +7,8 @@
 * [Applying IRSA](https://www.eksworkshop.com/docs/security/iam-roles-for-service-accounts/add_irsa/)
 * [Understanding IAM roles for service accounts, IRSA, on AWS EKS.](https://medium.com/@ankit.wal/the-how-of-iam-roles-for-service-accounts-irsa-on-aws-eks-3d76badb8942)
 * [Kafka UI AWS IAM](https://docs.kafka-ui.provectus.io/configuration/authentication/aws-iam)
+* [Amazon MSK 101 with Python](https://dev.to/aws-builders/amazon-msk-101-with-python-3g0)
+* [Apache Kafka Python Client](https://docs.confluent.io/kafka-clients/python/current/overview.html)
 
 ## Connect EKS pod to the MSK Kafka using IAM Auth
 
