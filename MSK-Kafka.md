@@ -9,6 +9,7 @@
 * [Kafka UI AWS IAM](https://docs.kafka-ui.provectus.io/configuration/authentication/aws-iam)
 * [Amazon MSK 101 with Python](https://dev.to/aws-builders/amazon-msk-101-with-python-3g0)
 * [Apache Kafka Python Client](https://docs.confluent.io/kafka-clients/python/current/overview.html)
+* [Amazon MSK Library in Python](https://github.com/aws/aws-msk-iam-sasl-signer-python)
 
 ## Connect EKS pod to the MSK Kafka using IAM Auth
 
