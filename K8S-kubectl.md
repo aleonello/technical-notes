@@ -144,3 +144,9 @@ kubectl scale deploy my-awesome-deployment --replicas=0 -n dev
 ```sh
 kubectl get deploy -n namespace | awk '{ if ($3 > 2) { print $1 } }' | xargs -n 1 kubectl scale deploy -n namespace --replicas=2
 ```
+
+## Check pod memory usage
+
+```sh
+kubectl top pods --all-namespaces | awk 'NR==1 {print $0; next} {printf "%-30s%-30s%-15s%-15s\n", $1, $2, $3/1024 " Gi", $4}'
+```
