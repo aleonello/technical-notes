@@ -15,14 +15,25 @@ kubectl config set-context default --cluster=k8s --user=<user>
 kubectl config use-context default
 ```
 
-## Generate resources file from a kubernetes cluster namespace
+## Generate resources file from a kubernetes cluster
 
+1. Create directories for each namespace
 ```sh
-for n in $(kubectl get -n=<namespace> -o=name pvc,configmap,serviceaccount,secret,ingress,service,deployment,statefulset,hpa,job,cronjob)
+kubectl get namespaces | awk '{print $1}' | xargs -L 1 mkdir
+```
+
+2. Delete the `NAME` directory
+```sh
+rm -rf NAME
+```
+
+3. Run the script below to access each directory and create the resource files
+```sh
+for i in $(find . -mindepth 1 -maxdepth 1 -type d); do cd "${i}" &&  echo "processing: ${i/\.\//}" && for n in $(kubectl get -n=${i/\.\//} -o=name pvc,configmap,serviceaccount,secret,ingress,service,deployment,statefulset,hpa,job,cronjob)
 do
     mkdir -p $(dirname $n)
-    kubectl get -o=yaml $n -n=<namespace> > $n.yaml
-done
+    kubectl get -o=yaml $n -n=${i/\.\//} > $n.yaml
+done && cd ..; done
 ```
 
 ## Port Forward
