@@ -19,15 +19,10 @@ kubectl config use-context default
 
 1. Create directories for each namespace
 ```sh
-kubectl get namespaces | awk '{print $1}' | xargs -L 1 mkdir
+kubectl get namespaces | awk 'NR>1{print $1}' | xargs -L 1 mkdir
 ```
 
-2. Delete the `NAME` directory
-```sh
-rm -rf NAME
-```
-
-3. Run the script below to access each directory and create the resource files
+2. Run the script below to access each directory and create the resource files
 ```sh
 for i in $(find . -mindepth 1 -maxdepth 1 -type d); do cd "${i}" &&  echo "processing: ${i/\.\//}" && for n in $(kubectl get -n=${i/\.\//} -o=name pvc,configmap,serviceaccount,secret,ingress,service,deployment,statefulset,hpa,job,cronjob)
 do
