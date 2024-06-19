@@ -24,7 +24,7 @@ kubectl get namespaces | awk 'NR>1{print $1}' | xargs -L 1 mkdir
 
 2. Run the script below to access each directory and create the resource files
 ```sh
-for i in $(find . -mindepth 1 -maxdepth 1 -type d); do cd "${i}" &&  echo "processing: ${i/\.\//}" && for n in $(kubectl get -n=${i/\.\//} -o=name pvc,configmap,serviceaccount,secret,ingress,service,deployment,statefulset,hpa,job,cronjob)
+for i in $(find . -mindepth 1 -maxdepth 1 -type d -printf "%f\n"); do cd "${i}" &&  echo "processing: ${i}" && for n in $(kubectl get -n=${i} -o=name pvc,configmap,serviceaccount,secret,ingress,service,deployment,statefulset,hpa,job,cronjob)
 do
     mkdir -p $(dirname $n)
     kubectl get -o=yaml $n -n=${i/\.\//} > $n.yaml
