@@ -5,6 +5,32 @@
 * [Kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [Get yaml from deployed kubernetes resources](https://jhooq.com/get-yaml-for-deployed-kubernetes-resources/)
 
+## A way to set kubectl config
+
+```sh
+kubectl config set-cluster k8s --server="https://<server_address>"
+kubectl config set clusters.k8s.certificate-authority-data <certificate_crt_code>
+kubectl config set-credentials <user> --token="<jwt_token>"
+kubectl config set-context default --cluster=k8s --user=<user>
+kubectl config use-context default
+```
+
+## Generate resources file from a kubernetes cluster namespace
+
+```sh
+for n in $(kubectl get -n=<namespace> -o=name pvc,configmap,serviceaccount,secret,ingress,service,deployment,statefulset,hpa,job,cronjob)
+do
+    mkdir -p $(dirname $n)
+    kubectl get -o=yaml $n -n=<namespace> > $n.yaml
+done
+```
+
+## Port Forward
+
+```sh
+kubectl port-forward <pod_name> <local_port>:<pod_port> -n <namespace>
+```
+
 ## Copy a TLS secret to another service
 
 ```sh

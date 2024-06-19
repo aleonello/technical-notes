@@ -33,7 +33,7 @@ choco install awscli -y
 ## AWS CLI - Update EKS Kubeconfig
 
 ```sh
-aws eks update-kubeconfig --region region-code --name my-cluster
+aws eks update-kubeconfig --region <region_code> --name <cluster_name>
 ```
 
 ## AWS CLI - Get EKS addons list
