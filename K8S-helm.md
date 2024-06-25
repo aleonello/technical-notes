@@ -25,3 +25,15 @@ helm rollback prometheus-stack 2 --namespace prometheus-stack
 ```sh
 helm template ./ms-service | kubectl apply --dry-run -f -
 ```
+
+## Helm Uninstall
+
+```sh
+helm uninstall <name> -n <namespace>
+```
+
+## Helm Template Example
+
+```sh
+helm template <name> <chart> -f <helm_value.yaml>
+```
