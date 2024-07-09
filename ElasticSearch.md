@@ -1,5 +1,29 @@
 # ElasticSearch
 
+## Get Indices
+
+```sh
+GET _cat/indices?v
+```
+
+## Get Indices in json format by GB size
+
+```sh
+GET _cat/indices?format=json&bytes=gb
+```
+
+## Get nodes memory usage
+
+```sh
+GET _cat/nodes?v=true&h=name,node*,heap*
+```
+
+## Get nodes stats
+
+```sh
+GET _nodes/stats?human&filter_path=nodes.*.name,nodes.*.indices.mappings.total_estimated_overhead*,nodes.*.jvm.mem.heap_max*
+```
+
 ## Fluentd Error: object mapping for [kubernetes.labels.app] tried to parse field [app] as object, but found a concrete value, object mapping for [kubernetes.labels.app] tried to parse field [app] as object, but found a concrete value
 
 1. Step 1: (Create an ingest pipeline with a simple Rename processor):
