@@ -182,3 +182,9 @@ kubectl get deploy -n namespace | awk '{ if ($3 > 2) { print $1 } }' | xargs -n 
 ```sh
 kubectl top pods --all-namespaces | awk 'NR==1 {print $0; next} {printf "%-30s%-30s%-15s%-15s\n", $1, $2, $3/1024 " Gi", $4}'
 ```
+
+## Store logs from a specific set of pods to file (example below lists the first 5 pods)
+
+```sh
+for i in $(kubectl get pods -n <namespace> | awk '{ if (NR>1 && NR<7) {print $1}}'); do kubectl logs $i -n <namespace > $i.log; done;
+```
