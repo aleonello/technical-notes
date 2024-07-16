@@ -1,5 +1,10 @@
 # ElasticSearch
 
+## Links
+
+* [Configure a lifecycle policy](https://www.elastic.co/guide/en/elasticsearch/reference/current/set-up-lifecycle-policy.html)
+* [Index lifecycle management](https://www.elastic.co/guide/en/observability/current/apm-ilm-how-to.html)
+
 ## Get Indices
 
 ```sh
