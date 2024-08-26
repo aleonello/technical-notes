@@ -55,3 +55,9 @@ echo "your-public-key-content" >> ~/.ssh/authorized_keys
 ```sh
 ssh  root@bastion.domain.com
 ```
+
+## Renew a certificate with Certbot
+
+```sh
+sudo certbot renew
+```
