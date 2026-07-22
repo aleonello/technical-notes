@@ -1,5 +1,12 @@
 # Software Development
 
+## Links
+
+* [Chocolatey Documentation](https://docs.chocolatey.org/)
+* [winget (Windows Package Manager) Documentation](https://learn.microsoft.com/en-us/windows/package-manager/winget/)
+* [NVM for Windows GitHub](https://github.com/coreybutler/nvm-windows)
+* [Visual Studio Code Documentation](https://code.visualstudio.com/docs)
+
 ## Tools
 
 * Windows Chocolatey script to install Development tools

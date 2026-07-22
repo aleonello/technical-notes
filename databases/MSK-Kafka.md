@@ -1,15 +1,18 @@
 # MSK Kafka
 
-# Links
+## Links
 
 * [How connect to MSK cluster from EKS cluster](https://stackoverflow.com/questions/69819087/how-connect-to-msk-cluster-from-eks-cluster)
 * [Securing Apache Kafka is easy and familiar with IAM Access Control for Amazon MSK](https://aws.amazon.com/pt/blogs/big-data/securing-apache-kafka-is-easy-and-familiar-with-iam-access-control-for-amazon-msk/)
 * [Applying IRSA](https://www.eksworkshop.com/docs/security/iam-roles-for-service-accounts/add_irsa/)
 * [Understanding IAM roles for service accounts, IRSA, on AWS EKS.](https://medium.com/@ankit.wal/the-how-of-iam-roles-for-service-accounts-irsa-on-aws-eks-3d76badb8942)
-* [Kafka UI AWS IAM](https://docs.kafka-ui.provectus.io/configuration/authentication/aws-iam)
 * [Amazon MSK 101 with Python](https://dev.to/aws-builders/amazon-msk-101-with-python-3g0)
 * [Apache Kafka Python Client](https://docs.confluent.io/kafka-clients/python/current/overview.html)
 * [Amazon MSK Library in Python](https://github.com/aws/aws-msk-iam-sasl-signer-python)
+* [Apache Kafka documentation](https://kafka.apache.org/documentation/)
+* [Amazon MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/what-is-msk.html)
+* [Amazon MSK IAM Auth library (Java)](https://github.com/aws/aws-msk-iam-auth)
+* [Kafka CLI Tools reference](https://kafka.apache.org/documentation/#tools)
 
 ## Connect EKS pod to the MSK Kafka using IAM Auth
 

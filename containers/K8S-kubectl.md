@@ -4,6 +4,11 @@
 
 * [Kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [Get yaml from deployed kubernetes resources](https://jhooq.com/get-yaml-for-deployed-kubernetes-resources/)
+* [Kubectl Reference Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+* [JSONPath Support in Kubectl](https://kubernetes.io/docs/reference/kubectl/jsonpath/)
+* [Krew - Kubectl Plugin Manager](https://krew.sigs.k8s.io/)
+* [Krew Plugin Index](https://krew.sigs.k8s.io/plugins/)
+* [Kubectl Overview](https://kubernetes.io/docs/reference/kubectl/)
 
 ## A way to set kubectl config
 

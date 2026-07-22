@@ -1,5 +1,12 @@
 # Email
 
+## Links
+
+* [Python smtplib Documentation](https://docs.python.org/3/library/smtplib.html)
+* [RFC 5321 — Simple Mail Transfer Protocol](https://datatracker.ietf.org/doc/html/rfc5321)
+* [Postfix Documentation](https://www.postfix.org/documentation.html)
+* [MXToolbox — Email Diagnostics](https://mxtoolbox.com/)
+
 ## Python Script to send test email through SMTP
 
 ```python
